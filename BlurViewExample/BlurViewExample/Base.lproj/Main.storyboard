@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BlurViewExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="photo" translatesAutoresizingMaskIntoConstraints="NO" id="Wss-bc-jBM">
+                                <rect key="frame" x="67" y="269" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="NYs-7v-nd3"/>
+                                    <constraint firstAttribute="width" constant="240" id="aAQ-8c-96Q"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OSt-dl-c2T">
+                                <rect key="frame" x="164" y="414" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="A02-47-CLA"/>
+                                    <constraint firstAttribute="height" constant="30" id="dr6-vV-Bvh"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TESTTESTTESTTEST" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f3h-zy-FJw">
+                                <rect key="frame" x="53" y="462" width="269" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="DNP-ya-4ux"/>
+                                    <constraint firstAttribute="width" constant="269" id="L80-SM-lQB"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xRS-Nd-co9">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </view>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="6d6-AY-jb1">
+                                <rect key="frame" x="67" y="50" width="240" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="236" id="jsk-dC-eea"/>
+                                    <constraint firstAttribute="height" constant="29" id="uWE-MC-OnM"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="valueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="dnO-7l-yio"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="OSt-dl-c2T" firstAttribute="top" secondItem="Wss-bc-jBM" secondAttribute="bottom" constant="17" id="8HB-zx-vNo"/>
+                            <constraint firstAttribute="trailing" secondItem="xRS-Nd-co9" secondAttribute="trailing" id="C7j-Hv-uOU"/>
+                            <constraint firstItem="6d6-AY-jb1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CvO-tP-Rk8"/>
+                            <constraint firstItem="xRS-Nd-co9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="I3t-Pp-LVF"/>
+                            <constraint firstItem="f3h-zy-FJw" firstAttribute="top" secondItem="OSt-dl-c2T" secondAttribute="bottom" constant="18" id="TWg-IM-912"/>
+                            <constraint firstItem="xRS-Nd-co9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="bbq-8r-B7L"/>
+                            <constraint firstItem="OSt-dl-c2T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="geL-37-FZd"/>
+                            <constraint firstAttribute="bottom" secondItem="xRS-Nd-co9" secondAttribute="bottom" id="mQi-Ta-ajU"/>
+                            <constraint firstItem="Wss-bc-jBM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nVm-mr-3hp"/>
+                            <constraint firstItem="6d6-AY-jb1" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="50" id="rcC-a2-Ifn"/>
+                            <constraint firstItem="Wss-bc-jBM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xfR-Dw-4fU"/>
+                            <constraint firstItem="f3h-zy-FJw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yy9-i9-q9U"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="viewForBlur" destination="xRS-Nd-co9" id="4hY-Ab-CDP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="photo" width="480" height="479"/>
+    </resources>
+</document>

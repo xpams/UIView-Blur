@@ -75,6 +75,9 @@ extension UIView {
         }
         
         func setup(style: UIBlurEffectStyle, intensity: CGFloat) -> Self {
+            NotificationCenter.default.addObserver(self, selector: #selector(BlurView.applicationDidEnterBackground(_:)), name: NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
+            NotificationCenter.default.addObserver(self, selector: #selector(BlurView.applicationWillEnterForeground(_:)), name: NSNotification.Name.UIApplicationWillEnterForeground, object: nil)
+            
             self.editing = true
             
             self.style = style
@@ -83,6 +86,14 @@ extension UIView {
             self.editing = false
             
             return self
+        }
+        
+        @objc func applicationDidEnterBackground(_ notification: Notification) {
+            blur?.removeFromSuperview();
+        }
+        
+        @objc func applicationWillEnterForeground(_ notification: Notification) {
+            applyBlurEffect();
         }
         
         func enable(isHidden: Bool = false) {

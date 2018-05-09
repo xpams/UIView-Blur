@@ -47,6 +47,14 @@ extension UIView {
          * Blur style. After it is changed all subviews on
          * blurContentView & vibrancyContentView will be deleted.
          */
+        ///Call this method when trying to preset a blur value in viewdidload
+        public func SecondaryInit(lvl:CGFloat){
+            DispatchQueue.main.asyncAfter(deadline: .now(), execute: {
+                self.intensity = 0
+                self.intensity = lvl
+            })
+        }
+        
         var style: UIBlurEffectStyle = .light {
             didSet {
                 guard oldValue != style,

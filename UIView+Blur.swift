@@ -48,11 +48,11 @@ extension UIView {
          * blurContentView & vibrancyContentView will be deleted.
          */
         ///Call this method when trying to preset a blur value in viewdidload
-        public func SecondaryInit(lvl:CGFloat){
+        func secondaryInit(intensity: CGFloat) {
             DispatchQueue.main.asyncAfter(deadline: .now(), execute: {
-                self.intensity = 0
-                self.intensity = lvl
-            })
+                self.intensity = 0;
+                self.intensity = intensity;
+            });
         }
         
         var style: UIBlurEffectStyle = .light {
